@@ -119,7 +119,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-sky-100">
+    <div className="h-screen overflow-hidden bg-[#F8FAFC] text-slate-900 font-sans selection:bg-sky-100">
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -136,11 +136,11 @@ export default function App() {
         </button>
       </div>
 
-      <div className="relative flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto min-h-screen">
+      <div className="relative flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto h-full overflow-hidden">
 
         {/* Sidebar / Controls */}
         <aside className={cn(
-          "fixed inset-0 z-40 bg-white lg:relative lg:inset-auto lg:block lg:w-[360px] lg:shrink-0 lg:border-r lg:border-slate-200 p-8 pt-24 lg:pt-8 transition-transform duration-300 ease-in-out overflow-y-auto",
+          "fixed inset-0 z-40 bg-white lg:relative lg:inset-auto lg:block lg:w-[360px] lg:shrink-0 lg:border-r lg:border-slate-200 p-8 pt-24 lg:pt-8 transition-transform duration-300 ease-in-out h-full overflow-y-auto",
           isMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}>
           <div className="hidden lg:flex items-center gap-3 mb-10">
@@ -191,23 +191,23 @@ export default function App() {
         </aside>
 
         {/* Main Rendering Area */}
-        <main className="flex-1 min-w-0 p-4 sm:p-8 lg:pt-4 lg:pb-12 lg:px-8 xl:pt-6 xl:pb-16 xl:px-12 flex flex-col items-center">
+        <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-4 xl:p-8 flex flex-col items-center justify-center h-full overflow-hidden">
           <div
             ref={chartRef}
-            className="w-full bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:pt-10 lg:pb-16 lg:px-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
+            className="w-full bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 lg:p-8 xl:p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-            <header className="relative w-full text-center mb-12 sm:mb-20">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full mb-6">
+            <header className="relative w-full text-center mb-6 lg:mb-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full mb-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-pulse" />
                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Temporal Projection</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 font-light tracking-tight leading-[1.1] mb-6">
-                Projected <span className="font-bold underline decoration-sky-500 decoration-4 underline-offset-8">Remaining Capacity</span> for age {age}
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 font-light tracking-tight leading-[1.1] mb-2">
+                Projected <span className="font-bold underline decoration-sky-500 decoration-2 underline-offset-4">Remaining Capacity</span> for age {age}
               </h2>
-              <p className="text-slate-400 text-base sm:text-xl font-medium tracking-wide">
+              <p className="text-slate-400 text-xs sm:text-sm font-medium tracking-wide">
                 Normalized Dataset: 1,080 Months (90 Year Horizon)
               </p>
             </header>
@@ -297,7 +297,7 @@ export default function App() {
                     })}
                   </div>
                 </div>
-                <div className="mt-8 flex items-center gap-4 bg-slate-50 px-5 py-2.5 rounded-full">
+                <div className="mt-4 flex items-center gap-4 bg-slate-50 px-5 py-2.5 rounded-full">
                   <div className="flex -space-x-1.5 font-mono text-[9px] font-bold text-slate-400 whitespace-nowrap">
                     <span>LEGEND:</span>
                   </div>
