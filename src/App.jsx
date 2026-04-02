@@ -227,7 +227,7 @@ export default function App() {
             </header>
 
             {/* Matrix Section */}
-            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[auto_auto_1fr] gap-12 xl:gap-24 items-start">
+            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[minmax(200px,auto)_minmax(200px,auto)_1fr] gap-x-12 gap-y-12 xl:gap-x-32 items-start">
 
               {/* Stats - Left Col */}
               <div className="order-2 xl:order-1 flex flex-col gap-8">
