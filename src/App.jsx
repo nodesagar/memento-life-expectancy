@@ -63,7 +63,7 @@ function ControlGroup({ label, children, icon: Icon }) {
 }
 
 export default function App() {
-  const [age, setAge] = useState(25);
+  const [age, setAge] = useState(18);
   const [allocations, setAllocations] = useState(() =>
     PALETTE.reduce((acc, cat) => ({ ...acc, [cat.id]: cat.defaultH }), {})
   );
