@@ -248,6 +248,30 @@ export default function App() {
                     );
                   })}
                 </div>
+
+                {/* Final Impact Analysis - Now positioned below Hygiene */}
+                <div className="p-6 bg-sky-500 rounded-[2rem] text-white shadow-2xl shadow-sky-200 relative overflow-hidden group mt-4">
+                  <div className="absolute top-0 right-0 p-4 opacity-10 transition-transform group-hover:scale-150 duration-700">
+                    <Eye className="w-16 h-16" />
+                  </div>
+                  <div className="relative z-10 flex flex-col gap-5">
+                    <div className="flex flex-col">
+                      <span className="text-5xl font-mono font-bold tracking-tighter tabular-nums leading-none mb-2">
+                        {stats.find(s => s.id === 'free')?.count}
+                      </span>
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 italic">Net Remainder Months</span>
+                    </div>
+                    
+                    <div className="h-px bg-white/20 w-8" />
+                    
+                    <div className="flex flex-col gap-3">
+                      <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-80 italic">The Freedom Variable</span>
+                      <p className="text-[10px] font-bold leading-relaxed opacity-90 uppercase">
+                        Total Remaining Time – Maintenance Debt
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Central Grid - Now Right-Aligned */}
@@ -324,30 +348,6 @@ export default function App() {
                       </div>
                     );
                   })}
-                </div>
-              </div>
-
-              {/* Final Impact Analysis - Now Horizontal and Spanning */}
-              <div className="order-4 xl:col-span-2 mt-4 p-8 bg-sky-500 rounded-[2rem] text-white shadow-2xl shadow-sky-200 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 transition-transform group-hover:scale-150 duration-700">
-                  <Eye className="w-24 h-24" />
-                </div>
-                <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8 sm:gap-16">
-                  <div className="flex flex-col">
-                    <span className="text-6xl sm:text-7xl font-mono font-bold tracking-tighter tabular-nums leading-none mb-2">
-                      {stats.find(s => s.id === 'free')?.count}
-                    </span>
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 italic">Net Remainder Months</span>
-                  </div>
-                  
-                  <div className="hidden sm:block w-px h-24 bg-white/20" />
-                  
-                  <div className="flex flex-col gap-4">
-                    <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-80 italic">The Freedom Variable</span>
-                    <p className="text-[11px] font-bold leading-relaxed opacity-90 max-w-[280px] uppercase">
-                      Calculated as: Total Remaining Time – Biological Maintenance Debt (Sleep, Work, Commute & Chores)
-                    </p>
-                  </div>
                 </div>
               </div>
 
