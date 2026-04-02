@@ -208,7 +208,7 @@ export default function App() {
         <main className="flex-1 min-w-0 p-4 sm:p-8 lg:pt-4 lg:pb-12 lg:px-8 xl:pt-6 xl:pb-16 xl:px-12 flex flex-col items-center">
           <div
             ref={chartRef}
-            className="w-full max-w-5xl bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:pt-10 lg:pb-16 lg:px-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
+            className="w-full bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:pt-10 lg:pb-16 lg:px-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -227,7 +227,7 @@ export default function App() {
             </header>
 
             {/* Matrix Section */}
-            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] gap-12 xl:gap-8 items-start">
+            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[auto_auto_1fr] gap-12 xl:gap-24 items-start">
 
               {/* Stats - Left Col */}
               <div className="order-2 xl:order-1 flex flex-col gap-8">
@@ -250,8 +250,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Central Grid */}
-              <div className="order-1 xl:order-2 flex flex-col items-center">
+              {/* Central Grid - Now Right-Aligned */}
+              <div className="order-1 xl:order-3 flex flex-col items-center xl:items-end w-full">
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-b from-slate-100 to-transparent rounded-[2.5rem] blur-xl opacity-25" />
                   <div
@@ -307,8 +307,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Stats - Right Col */}
-              <div className="order-3 flex flex-col gap-10">
+              {/* Stats - Right Col - Now Center-Aligned */}
+              <div className="order-3 xl:order-2 flex flex-col gap-10">
                 <div className="grid grid-cols-2 xl:grid-cols-1 gap-6">
                   {stats.slice(5, 8).map((seg) => {
                     return (
