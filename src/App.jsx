@@ -54,8 +54,8 @@ function ControlGroup({ label, children, icon: Icon }) {
   return (
     <div className="py-4 border-b border-slate-100 last:border-0">
       <div className="flex items-center gap-2 mb-3">
-        {Icon && <Icon className="w-3.5 h-3.5 text-slate-400" />}
-        <div className="text-[10px] uppercase font-bold tracking-widest text-slate-400">{label}</div>
+        {Icon && <Icon className="w-3.5 h-3.5 text-slate-400 whitespace-nowrap" />}
+        <div className="text-[10px] uppercase font-bold tracking-widest text-slate-400 whitespace-nowrap">{label}</div>
       </div>
       {children}
     </div>
@@ -170,7 +170,7 @@ export default function App() {
                   <div key={cat.id} className="group">
                     <div className="flex justify-between items-center mb-2">
                       <div className="flex items-center gap-2.5">
-                        <div className="w-2.5 h-2.5 rounded-full ring-2 ring-slate-50" style={{ backgroundColor: cat.color }} />
+                        <div className="w-2.5 h-2.5 rounded-full ring-2 ring-slate-50 shrink-0" style={{ backgroundColor: cat.color }} />
                         <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors uppercase tracking-tight">
                           {cat.title}
                         </span>
@@ -237,8 +237,8 @@ export default function App() {
                     return (
                       <div key={seg.id} className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2.5">
-                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50" style={{ backgroundColor: seg.color }} />
-                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400">{seg.label}</span>
+                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50 shrink-0" style={{ backgroundColor: seg.color }} />
+                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 whitespace-nowrap">{seg.label}</span>
                         </div>
                         <div className="flex items-baseline gap-2">
                           <span className="text-2xl font-mono font-bold tabular-nums text-slate-700">{seg.count}</span>
@@ -293,7 +293,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="mt-8 flex items-center gap-4 bg-slate-50 px-5 py-2.5 rounded-full">
-                  <div className="flex -space-x-1.5 font-mono text-[9px] font-bold text-slate-400">
+                  <div className="flex -space-x-1.5 font-mono text-[9px] font-bold text-slate-400 whitespace-nowrap">
                     <span>LEGEND:</span>
                   </div>
                   <div className="w-px h-3 bg-slate-200" />
@@ -314,8 +314,8 @@ export default function App() {
                     return (
                       <div key={seg.id} className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2.5">
-                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50" style={{ backgroundColor: seg.color }} />
-                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400">{seg.label}</span>
+                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50 shrink-0" style={{ backgroundColor: seg.color }} />
+                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 whitespace-nowrap">{seg.label}</span>
                         </div>
                         <div className="flex items-baseline gap-2">
                           <span className="text-2xl font-mono font-bold tabular-nums text-slate-700">{seg.count}</span>
