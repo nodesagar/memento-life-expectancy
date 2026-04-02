@@ -233,7 +233,6 @@ export default function App() {
               <div className="order-2 xl:order-1 flex flex-col gap-8">
                 <div className="grid grid-cols-2 xl:grid-cols-1 gap-6">
                   {stats.slice(1, 5).map((seg) => {
-                    const CategoryIcon = PALETTE.find(p => p.id === seg.id)?.icon || ChevronRight;
                     return (
                       <div key={seg.id} className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2.5">
@@ -247,30 +246,6 @@ export default function App() {
                       </div>
                     );
                   })}
-                </div>
-
-                {/* Final Impact Analysis - Now positioned below Hygiene */}
-                <div className="p-6 bg-sky-500 rounded-[2rem] text-white shadow-2xl shadow-sky-200 relative overflow-hidden group mt-4">
-                  <div className="absolute top-0 right-0 p-4 opacity-10 transition-transform group-hover:scale-150 duration-700">
-                    <Eye className="w-16 h-16" />
-                  </div>
-                  <div className="relative z-10 flex flex-col gap-5">
-                    <div className="flex flex-col">
-                      <span className="text-5xl font-mono font-bold tracking-tighter tabular-nums leading-none mb-2">
-                        {stats.find(s => s.id === 'free')?.count}
-                      </span>
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 italic">Net Remainder Months</span>
-                    </div>
-                    
-                    <div className="h-px bg-white/20 w-8" />
-                    
-                    <div className="flex flex-col gap-3">
-                      <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-80 italic">The Freedom Variable</span>
-                      <p className="text-[10px] font-bold leading-relaxed opacity-90 uppercase">
-                        Total Remaining Time – Maintenance Debt
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -349,6 +324,24 @@ export default function App() {
                     );
                   })}
                 </div>
+              </div>
+
+              {/* Freedom Rectangle - Spanning Col 1 and 2 */}
+              <div className="order-4 xl:col-span-2 p-5 bg-sky-500 rounded-[1.5rem] text-white shadow-2xl shadow-sky-100 flex items-center justify-between group mt-2">
+                <div className="flex items-center gap-6">
+                  <div className="flex flex-col">
+                    <span className="text-4xl font-mono font-bold tracking-tighter tabular-nums leading-none">
+                      {stats.find(s => s.id === 'free')?.count}
+                    </span>
+                    <span className="text-[8px] font-black uppercase tracking-widest opacity-70">Months Remaining</span>
+                  </div>
+                  <div className="w-px h-8 bg-white/20" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black uppercase tracking-widest italic opacity-90">The Freedom Variable</span>
+                    <span className="text-[8px] font-bold opacity-70 uppercase tracking-tighter">Liquid capacity after biological debt</span>
+                  </div>
+                </div>
+                <Eye className="w-5 h-5 opacity-20 group-hover:opacity-100 transition-opacity" />
               </div>
 
             </div>
