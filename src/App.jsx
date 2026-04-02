@@ -313,7 +313,7 @@ export default function App() {
               </div>
 
               {/* Freedom Rectangle - Tight Positioning below labels */}
-              <div className="order-4 xl:col-start-1 xl:col-span-2 xl:row-start-2 p-8 bg-sky-500 rounded-[1.5rem] text-white shadow-2xl shadow-sky-100 flex items-center justify-between group mt-6">
+              <div className="order-4 xl:col-start-1 xl:col-span-2 xl:row-start-2 p-8 bg-sky-500 rounded-[1.5rem] text-white shadow-2xl shadow-sky-100 flex items-center justify-between group mt-6 xl:w-[92%] mx-auto xl:mx-0">
                 <div className="flex items-center gap-6">
                   <div className="flex flex-col">
                     <span className="text-4xl font-mono font-bold tracking-tighter tabular-nums leading-none">
