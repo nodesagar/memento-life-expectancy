@@ -205,10 +205,10 @@ export default function App() {
         </aside>
 
         {/* Main Rendering Area */}
-        <main className="flex-1 min-w-0 p-4 sm:p-8 lg:p-12 xl:p-16 flex flex-col items-center">
+        <main className="flex-1 min-w-0 p-4 sm:p-8 lg:pt-4 lg:pb-12 lg:px-8 xl:pt-6 xl:pb-16 xl:px-12 flex flex-col items-center">
           <div
             ref={chartRef}
-            className="w-full max-w-5xl bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:p-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
+            className="w-full max-w-5xl bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 lg:pt-10 lg:pb-16 lg:px-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
