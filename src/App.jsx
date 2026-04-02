@@ -226,11 +226,11 @@ export default function App() {
               </p>
             </header>
 
-            {/* Matrix Section */}
-            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[minmax(160px,auto)_minmax(160px,auto)_1fr] gap-8 xl:gap-16 items-start">
+            {/* Matrix Section - Updated Grid for tighter card positioning */}
+            <div className="relative w-full grid grid-cols-1 xl:grid-cols-[minmax(160px,auto)_minmax(160px,auto)_1fr] xl:grid-rows-[auto_1fr] gap-x-8 xl:gap-x-16 gap-y-4 items-start">
 
-              {/* Stats - Left Col */}
-              <div className="order-2 xl:order-1 flex flex-col gap-8">
+              {/* Stats - Left Col (Subject Profile) */}
+              <div className="order-2 xl:order-1 xl:col-start-1 xl:row-start-1 flex flex-col gap-8">
                 <div className="grid grid-cols-2 xl:grid-cols-1 gap-6">
                   {stats.slice(1, 5).map((seg) => {
                     return (
@@ -249,8 +249,28 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Central Grid - Now Right-Aligned */}
-              <div className="order-1 xl:order-3 flex flex-col items-center xl:items-end w-full">
+              {/* Stats - Right Col (Maintenance Breakdown) */}
+              <div className="order-3 xl:order-2 xl:col-start-2 xl:row-start-1 flex flex-col gap-10">
+                <div className="grid grid-cols-2 xl:grid-cols-1 gap-6">
+                  {stats.slice(5, 8).map((seg) => {
+                    return (
+                      <div key={seg.id} className="flex flex-col gap-1.5">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50 shrink-0" style={{ backgroundColor: seg.color }} />
+                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 whitespace-nowrap">{seg.label}</span>
+                        </div>
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-2xl font-mono font-bold tabular-nums text-slate-700">{seg.count}</span>
+                          <span className="text-[10px] font-bold text-slate-300">MO.</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Matrix Grid (Spans multiple rows) */}
+              <div className="order-1 xl:order-3 xl:col-start-3 xl:row-start-1 xl:row-span-2 flex flex-col items-center xl:items-end w-full">
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-b from-slate-100 to-transparent rounded-[2.5rem] blur-xl opacity-25" />
                   <div
@@ -306,28 +326,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Stats - Right Col - Now Center-Aligned */}
-              <div className="order-3 xl:order-2 flex flex-col gap-10">
-                <div className="grid grid-cols-2 xl:grid-cols-1 gap-6">
-                  {stats.slice(5, 8).map((seg) => {
-                    return (
-                      <div key={seg.id} className="flex flex-col gap-1.5">
-                        <div className="flex items-center gap-2.5">
-                          <div className="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-slate-50 shrink-0" style={{ backgroundColor: seg.color }} />
-                          <span className="text-[11px] font-black uppercase tracking-widest text-slate-400 whitespace-nowrap">{seg.label}</span>
-                        </div>
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-2xl font-mono font-bold tabular-nums text-slate-700">{seg.count}</span>
-                          <span className="text-[10px] font-bold text-slate-300">MO.</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Freedom Rectangle - Spanning Col 1 and 2 */}
-              <div className="order-4 xl:col-span-2 p-5 bg-sky-500 rounded-[1.5rem] text-white shadow-2xl shadow-sky-100 flex items-center justify-between group mt-2">
+              {/* Freedom Rectangle - Tight Positioning below labels */}
+              <div className="order-4 xl:col-start-1 xl:col-span-2 xl:row-start-2 p-5 bg-sky-500 rounded-[1.5rem] text-white shadow-2xl shadow-sky-100 flex items-center justify-between group mt-6">
                 <div className="flex items-center gap-6">
                   <div className="flex flex-col">
                     <span className="text-4xl font-mono font-bold tracking-tighter tabular-nums leading-none">
