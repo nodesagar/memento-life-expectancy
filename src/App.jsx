@@ -32,7 +32,7 @@ function cn(...inputs) {
 const TOTAL_LIFE_EXPECTANCY = 90;
 const MONTHS_PER_YEAR = 12;
 const TOTAL_CELLS = TOTAL_LIFE_EXPECTANCY * MONTHS_PER_YEAR; // 1,080
-const GRID_COLUMNS = 30; // 1 row = 30 months = 2.5 years
+const GRID_COLUMNS = 36; // 1 row = 36 months = 3 years
 
 const PALETTE = [
   { id: 'sleep', title: 'Sleep Cycle', color: '#0EA5E9', defaultH: 8, icon: Clock },
@@ -302,7 +302,7 @@ export default function App() {
                   </span>
                   <div className="w-px h-3 bg-slate-200" />
                   <span className="font-mono text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                    1 ROW = 2.5 YEARS
+                    1 ROW = 3 YEARS
                   </span>
                 </div>
               </div>
