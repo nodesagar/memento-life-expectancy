@@ -85,3 +85,30 @@ input[type=range]:active::-webkit-slider-thumb {
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* Force visible scrollbar on mobile to communicate scrollability */
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    display: block !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(71, 85, 105, 0.5); /* slate-600 with more opacity */
+    border-radius: 20px;
+    border: 2px solid transparent; /* adds some padding if needed */
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(71, 85, 105, 0.7);
+  }
+  
+  /* Standard scrollbar for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(71, 85, 105, 0.5) transparent;
+  }
+}

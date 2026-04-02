@@ -119,7 +119,7 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen overflow-hidden bg-[#F8FAFC] text-slate-900 font-sans selection:bg-sky-100">
+    <div className="lg:h-screen lg:overflow-hidden overflow-y-auto bg-[#F8FAFC] text-slate-900 font-sans selection:bg-sky-100">
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -136,7 +136,7 @@ export default function App() {
         </button>
       </div>
 
-      <div className="relative flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto h-full overflow-hidden">
+      <div className="relative flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto lg:h-full lg:overflow-hidden">
 
         {/* Sidebar / Controls */}
         <aside className={cn(
@@ -191,10 +191,10 @@ export default function App() {
         </aside>
 
         {/* Main Rendering Area */}
-        <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-4 xl:p-8 flex flex-col items-center justify-center h-full overflow-hidden">
+        <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-4 xl:p-8 flex flex-col items-center justify-center lg:h-full lg:overflow-hidden">
           <div
             ref={chartRef}
-            className="w-full bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 lg:p-8 xl:p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
+            className="w-full bg-white rounded-[2rem] sm:rounded-[2.5rem] p-4 lg:p-8 xl:p-10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.05)] border border-slate-50 relative overflow-hidden"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -260,9 +260,9 @@ export default function App() {
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-b from-slate-100 to-transparent rounded-[2.5rem] blur-xl opacity-25" />
                   <div
-                    className="relative grid gap-[6px] p-6 sm:p-10 bg-white border border-slate-100 rounded-[2rem] sm:rounded-[2.5rem] shadow-sm transform-gpu transition-transform duration-500 hover:scale-[1.01]"
+                    className="relative grid gap-[3px] sm:gap-[6px] p-4 sm:p-10 bg-white border border-slate-100 rounded-[2rem] sm:rounded-[2.5rem] shadow-sm transform-gpu transition-transform duration-500 hover:scale-[1.01]"
                     style={{
-                      gridTemplateColumns: `repeat(${GRID_COLUMNS}, minmax(10px, 18px))`,
+                      gridTemplateColumns: `repeat(${GRID_COLUMNS}, minmax(4px, 18px))`,
                     }}
                   >
                     {Array.from({ length: TOTAL_CELLS }).map((_, i) => {
