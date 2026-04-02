@@ -188,20 +188,6 @@ export default function App() {
             </ControlGroup>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-slate-100 sm:sticky sm:bottom-0 bg-white pb-4">
-            <button
-              onClick={handleDownload}
-              disabled={isCapturing}
-              className="group relative flex items-center justify-center gap-3 w-full py-4 bg-slate-900 hover:bg-black text-white px-6 rounded-2xl font-bold transition-all shadow-xl shadow-slate-200 transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
-            >
-              <Download className="w-5 h-5 transition-transform group-hover:translate-y-px" />
-              <span>Generate Forensic Artifact</span>
-            </button>
-            <div className="flex items-center gap-2 mt-6 text-[10px] text-slate-400 font-bold uppercase tracking-widest px-2">
-              <Info className="w-3 h-3" />
-              <span>Localized Privacy: No external data transit</span>
-            </div>
-          </div>
         </aside>
 
         {/* Main Rendering Area */}
@@ -346,17 +332,6 @@ export default function App() {
 
             </div>
 
-            {/* Footer Tag */}
-            <footer className="mt-20 pt-10 border-t border-slate-50 flex flex-col sm:flex-row justify-between items-center gap-6 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="font-mono text-[9px] font-bold tracking-widest uppercase text-slate-500">
-                Data Precision: 1.000 (Exact) | Artifact: CRV-2026
-              </div>
-              <div className="flex items-center gap-6">
-                <span className="font-mono text-[9px] font-bold tracking-widest uppercase">MEMENTO™</span>
-                <div className="w-1.5 h-1.5 rounded-full bg-slate-300" />
-                <span className="font-mono text-[9px] font-bold tracking-widest uppercase">System Operational</span>
-              </div>
-            </footer>
           </div>
         </main>
       </div>
