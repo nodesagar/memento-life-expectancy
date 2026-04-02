@@ -41,7 +41,7 @@ const PALETTE = [
   { id: 'bathroom', title: 'Hygiene', color: '#F472B6', defaultH: 1, icon: Bath },
   { id: 'driving', title: 'Commute', color: '#EAB308', defaultH: 1, icon: Car },
   { id: 'chores', title: 'Chores', color: '#10B981', defaultH: 1, icon: CheckSquare },
-  { id: 'screen', title: 'Screen Time', color: '#4F46E5', defaultH: 5, icon: Smartphone },
+  { id: 'screen', title: 'Screen Time', color: '#4F46E5', defaultH: 4, icon: Smartphone },
 ];
 
 const AGE_COLOR = '#E2E8F0';
