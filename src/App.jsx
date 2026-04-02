@@ -255,9 +255,9 @@ export default function App() {
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-b from-slate-100 to-transparent rounded-[2.5rem] blur-xl opacity-25" />
                   <div
-                    className="relative grid gap-[3px] sm:gap-[5px] p-6 sm:p-10 bg-white border border-slate-100 rounded-[2rem] sm:rounded-[2.5rem] shadow-sm transform-gpu transition-transform duration-500 hover:scale-[1.01]"
+                    className="relative grid gap-[4px] sm:gap-[6px] p-6 sm:p-10 bg-white border border-slate-100 rounded-[2rem] sm:rounded-[2.5rem] shadow-sm transform-gpu transition-transform duration-500 hover:scale-[1.01]"
                     style={{
-                      gridTemplateColumns: `repeat(${GRID_COLUMNS}, minmax(6px, 11px))`,
+                      gridTemplateColumns: `repeat(${GRID_COLUMNS}, minmax(8px, 16px))`,
                     }}
                   >
                     {Array.from({ length: TOTAL_CELLS }).map((_, i) => {
