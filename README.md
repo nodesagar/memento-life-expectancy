@@ -1,8 +1,20 @@
 # MEMENTO
 
+```text
+  __  __ ___ __  __ ___ _  _ _____ ___  
+ |  \/  | __|  \/  | __| \| |_   _/ _ \ 
+ | |\/| | _|| |\/| | _|| .` | | || (_) |
+ |_|  |_|___|_|  |_|___|_|\_| |_| \___/ 
+                                         
+```
+
 > A high-precision, forensic life expectancy visualizer.
 
-![Memento Preview](https://github.com/nodesagar/memento-life-expectancy/raw/main/chart.jpeg)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Lucide](https://img.shields.io/badge/Lucide-black?style=for-the-badge&logo=lucide&logoColor=white)
 
 **MEMENTO** is a data-dense dashboard designed to visualize the finite nature of time. By mapping a 90-year life expectancy into a precise 1,080-month grid, MEMENTO provides a "Temporal Atlas" that quantifies biological maintenance (sleep, work, hygiene) against net potential freedom.
 
